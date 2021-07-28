@@ -1,3 +1,20 @@
+best_checkpoint/
+checkpoint/
+log/
+img/
+viz/
+figs/
+.git/
+*.npy
+*.png
+*.npz
+*.zip
+*.pyc
+*.swp
+*.mp4
+*.bin
+*.pickle
+.DS_Store
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
