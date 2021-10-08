@@ -1,5 +1,5 @@
 # Split-and-Recombine-Net
-Code for "SRNet: Improving Generalization in 3D Human Pose Estimation with a Split-and-Recombine Approach" ECCV'20
+This is the original PyTorch implementation of the following work: [SRNet: Improving Generalization in 3D Human Pose Estimation with a Split-and-Recombine Approach](https://arxiv.org/pdf/2007.09389.pdf) in ECCV 2020.
 
 ## Features
 - [x] Support single-frame setting (e.g., -arc 1,1,1)
@@ -121,4 +121,13 @@ You can add the arguments in the command like: `--cam-train [0] --cam-test [1,2,
 For convenience of different hyper-parameter settings, you can edit the scipt **run_os.py** to run experiments for once.
 #### We also put some configuration examples in the dictory config/. To facilitate reproduction, we provide the training logs for single-frame and multi-frame settings [here](https://drive.google.com/drive/folders/1Z1xZt9n749cW89eKPcR4WJ8RgRS3ar-8?usp=sharing). You can check **the hyperparameters, training loss and test results for each epoch** in these logs as well.
 
+ If you find this repository useful for your work, please consider citing it as follows:
 
+```
+@inproceedings{Zeng2020SRNet,
+  title={SRNet: Improving Generalization in 3D Human Pose Estimation with a Split-and-Recombine Approach},
+  author={Ailing Zeng and Xiao Sun and Fuyang Huang and Minhao Liu and Qiang Xu and Stephen Ching-Feng Lin},
+  booktitle={ECCV},
+  year={2020}
+}
+```
