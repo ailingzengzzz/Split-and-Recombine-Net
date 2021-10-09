@@ -278,6 +278,10 @@ if not args.evaluate:
             # Validation:
             eval_3d_error = val(train_generator_eval, model_pos, args.norm)
             losses_3d_train_eval.append(eval_3d_error)
+        else:
+            print('Ignore the Evaluation...')
+            losses_3d_valid.append(1) #you can skip test for each epoch by using it
+            losses_3d_train_eval.append(1)
 
         elapsed = (time() - start_time) / 60
 
