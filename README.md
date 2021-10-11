@@ -1,6 +1,10 @@
 # Split-and-Recombine-Net
 This is the original PyTorch implementation of the following work: [SRNet: Improving Generalization in 3D Human Pose Estimation with a Split-and-Recombine Approach](https://arxiv.org/pdf/2007.09389.pdf) in ECCV 2020.
 
+![News](https://img.shields.io/badge/-News!-red) Recently, our method has been verified in [3D Human Mesh Recovery](https://openaccess.thecvf.com/content/ICCV2021/papers/Lee_Uncertainty-Aware_Human_Mesh_Recovery_From_Video_by_Learning_Part-Based_3D_ICCV_2021_paper.pdf) as a decoder to obtain both per-frame accuracy and motion smoothness in ICCV 2021! 
+
+Beyond this task,  You can make full use of prior knowledge in your task to design the **group** strategies. Our proposed method (Split-and-Recombine) is an efficient and effective way to replace fully connected layer with about **[1/group] parameters (group is 5 in this task) and better performance**. 
+
 ## Features
 - [x] Support single-frame setting (e.g., -arc 1,1,1)
 - [x] Support multi-frame setting (e.g., -arc 3,3,3,3,3 for 243 frames)
@@ -8,9 +12,9 @@ This is the original PyTorch implementation of the following work: [SRNet: Impro
 - [x] Support cross-subject, cross-action, cross-camera settings
 - [x] Support [VideoPose3d](https://arxiv.org/abs/1811.11742), [SimpleBaseline](https://arxiv.org/pdf/1705.03098.pdf) as our baseline.
 
-This task is to input 2d poses to lift into 3d relative poses. Take root (index=0) joint as the zero-position under camera coordinate by default.
 
 ## Introduction
+Monocular 3D human pose estimation is to input 2d poses to lift into 3d relative poses. Take root (index=0) joint as the zero-position under camera coordinate by default.\
 Human poses that are rare or unseen in a training set are challenging for a network to predict. Similar to the long-tailed distribution problem in visual recognition, the small number of examples for such poses limits the ability of networks to model them. Interestingly, local pose distributions suffer less from the long-tail problem, i.e., local
 joint configurations within a rare pose may appear within other poses in the training set, making them less rare.
 ![observation](img/observation.png)
