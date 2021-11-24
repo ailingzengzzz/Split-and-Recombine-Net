@@ -101,7 +101,7 @@ class ColorStyle:
 def show_2d_hm36_pose(img_path, pose_2d, index=0):
     # plot single pose from a image
     colorstyle = ColorStyle(color1, link_pairs1, point_color1)
-    connections = [[0, 1], [1, 2], [2, 3][0, 4], [4, 5],
+    connections = [[0, 1], [1, 2], [2, 3], [0, 4], [4, 5],
                    [5, 6], [0, 7], [7, 8], [8, 9], [9, 10],
                    [8, 11], [11, 12], [12, 13], [8, 14], [14, 15], [15, 16]]
     if img_path is None:
